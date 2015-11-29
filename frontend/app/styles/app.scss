@@ -11,8 +11,13 @@
   background-color: #f7f7f7;
 }
 
-#portfolio {
+#portfolio, #team {
   background-color: #fff;
+}
+
+
+.navbar {
+  margin-bottom: 0;
 }
 
 .navbar-default .nav li a {
@@ -25,5 +30,22 @@
     background-color: #fed136;
     color: #fff;
     border-radius: 3px;
+  }
+}
+
+// .nav > li > a:hover, .nav > li > a:focus
+.nav-pills {
+  margin-top: 100px;
+  float: right;
+
+  & > li > a {
+    background-color: #e7e7e7;
+    color: #777;
+    border-radius: 0 0 5px 5px;
+
+    &.active, &:focus, &:hover {
+      background-color: #fed136;
+      color: #fff;
+    }
   }
 }
