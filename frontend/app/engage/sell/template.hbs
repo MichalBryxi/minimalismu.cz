@@ -13,8 +13,20 @@
           <img src="img/sell/facebook.png" class="img-responsive img-circle" alt="">
           <h4>Facebook</h4>
           <p class="text-muted">
-            Jednoduché oslovení tvého blízkého okolí. Zkopíruj text z ráměčku níže na svoji <a href="https://facebook.com">facebookovou zeď</a>, doplň fotku&nbsp;věci a její jméno. Nasdílej.
-            <textarea class="select-all form-control text-left" rows="4">Prodám [jméno věci]. Cena 30Kč. Výtěžek půjde na dobročinnou akci #30dníMinimalismu http://30dni.minimalismu.cz/</textarea>
+            Jednoduché oslovení tvého blízkého okolí. Zkopíruj text z ráměčku níže na svoji <a href="https://facebook.com" target="_blank">facebookovou zeď</a>, doplň fotku&nbsp;věci a její jméno. Nasdílej.
+            <textarea id="fb-dummy-text" class="select-all form-control text-left" rows="4">Prodám [jméno věci]. Cena 30Kč. Výtěžek půjde na dobročinnou akci #30dníMinimalismu http://30dni.minimalismu.cz/</textarea>
+            {{#copy-button
+              clipboardTarget="#fb-dummy-text"
+              success='copySuccess'
+              error='error'
+              class="btn-copy-to-clipboard"
+            }}
+              {{#if copied}}
+                {{fa-icon "fa-check-square-o"}}
+              {{else}}
+                {{fa-icon "fa-clipboard"}}
+              {{/if}}
+            {{/copy-button}}
             Předání věci od prodávajícího ke kupujícímu si každý musí řešit sám, individuálně podle situace.
           </p>
         </div>
@@ -24,7 +36,7 @@
           <img src="img/sell/pw.jpg" class="img-responsive img-circle" alt="">
           <h4>Offline kavárna</h4>
           <p class="text-muted">
-            Spolupracujeme s <a href="http://www.perfect-world.cz">kavárnou Perfect World</a>, kde můžete věc nechat a ostatní návštěvníci kavárny si jí budou moci koupit.<br />
+            Spolupracujeme s <a href="http://www.perfect-world.cz" target="_blank">kavárnou Perfect World</a>, kde můžete věc nechat a ostatní návštěvníci kavárny si jí budou moci koupit.<br />
             Věc uložte do krabice od bot a stručně popište co je vevnitř (například: "Pánská šála"). Krabici nijak nebalte, ani nezavazujte. Je třeba, aby se kdokoli mohl podívat co v ní je.<br />
             Krabici poté odevzdejte v kavárně a tím váš úkol skončil. Kdokoli si její obsah bude moci za <strong>30 Kč</strong> koupit.
           </p>
