@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('sell');
     this.route('give');
   });
+  this.route('donations');
 });
 
 export default Router;

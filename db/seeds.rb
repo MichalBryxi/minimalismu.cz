@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+15.times do |i|
+  Donation.create(
+    date: (rand*10).days.ago,
+    account_name: "Account #{i}",
+    message: "Foo bar message of the day #30dníMinimalismu number #{i}",
+    amount: i
+  )
+end
