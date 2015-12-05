@@ -31,6 +31,14 @@ bower install
 cd ..
 ```
 
+### Setup db
+```sh
+# Initialize database structure & seed initial data
+rake db:reset
+# Download doantion list from FIO
+rake donations:reset
+```
+
 ### Running
 
 ```sh

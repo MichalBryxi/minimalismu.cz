@@ -1,3 +1,3 @@
 class Goal < ActiveRecord::Base
-  default_scope { order('\'order\' ASC') }
+  default_scope { order(order: :asc) }
 end
