@@ -1,0 +1,12 @@
+<section id="progress">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Kolik jsme vybrali?</h2>
+        {{#each model.goals as |goal|}}
+          {{x-progress goal=goal goals=model.goals donationsSum=donationsSum}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
