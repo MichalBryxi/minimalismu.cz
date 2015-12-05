@@ -23,7 +23,7 @@ export default Ember.Component.extend({
     } else if (donatedInCurrent < 0) {
       return 0;
     } else {
-      return donatedInCurrent / amountInCurrent * 100;
+      return (donatedInCurrent / amountInCurrent * 100).toFixed(0);
     }
   }.property('previousGoalsSum', 'donationsSum', 'goal.amount'),
 

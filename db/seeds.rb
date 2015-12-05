@@ -6,21 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-3.times do |i|
-  Donation.create(
-    date: (rand*10).days.ago,
-    account_name: "Account #{i}",
-    message: "Foo bar message of the day #30dníMinimalismu number #{i}",
-    amount: (i+1) * 1000
-  )
-end
-
 Goal.create(
   name: 'Strava',
   description: 'Jídlo je dobré.',
   icon: 'fa-cutlery',
   amount: 3000,
-  order: 1
+  order: 11
+)
+
+Goal.create(
+  name: 'Pobyt v rodině',
+  description: 'Ubytování',
+  icon: 'fa-bed',
+  amount: 6000,
+  order: 12
 )
 
 Goal.create(
@@ -28,13 +27,16 @@ Goal.create(
   description: 'Autobusem od *Student Agency*.',
   icon: 'fa-bus',
   amount: 8000,
-  order: 2
+  order: 13
 )
 
-Goal.create(
-  name: 'Škola, výlety, pobyt v rodině',
-  description: 'Doprovodný program je **velmi** důležitý.',
-  icon: 'fa-bed',
-  amount: 20000,
-  order: 3
-)
+10.times do |i|
+  n = i + 1
+  Goal.create(
+    name: "Jazykový kurz #{n}. den",
+    description: "Hlavní náplň celého výletu.",
+    icon: 'fa-graduation-cap',
+    amount: 1400,
+    order: n
+  )
+end
