@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205181014) do
+ActiveRecord::Schema.define(version: 20151205190143) do
 
   create_table "donations", force: :cascade do |t|
     t.datetime "date"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20151205181014) do
     t.decimal  "amount"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.string  "name"
+    t.string  "description"
+    t.decimal "amount"
+    t.integer "order"
   end
 
 end
