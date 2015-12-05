@@ -5,3 +5,38 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Goal.create(
+  name: 'Strava',
+  description: 'Jídlo je dobré.',
+  icon: 'fa-cutlery',
+  amount: 3000,
+  order: 11
+)
+
+Goal.create(
+  name: 'Pobyt v rodině',
+  description: 'Ubytování',
+  icon: 'fa-bed',
+  amount: 6000,
+  order: 12
+)
+
+Goal.create(
+  name: 'Doprava',
+  description: 'Autobusem od *Student Agency*.',
+  icon: 'fa-bus',
+  amount: 8000,
+  order: 13
+)
+
+10.times do |i|
+  n = i + 1
+  Goal.create(
+    name: "Jazykový kurz #{n}. den",
+    description: "Hlavní náplň celého výletu.",
+    icon: 'fa-graduation-cap',
+    amount: 1400,
+    order: n
+  )
+end
