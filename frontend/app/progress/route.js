@@ -7,9 +7,4 @@ export default Ember.Route.extend({
       goals: this.store.find('goal')
     });
   }
-  //
-  // setupController (controller, model) {
-  //   controller.set('attrs.donations', model.donations);
-  //   controller.set()
-  // }
 });

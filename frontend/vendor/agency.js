@@ -31,3 +31,7 @@ $(window).load(function () {
       this.select();
   });
 });
+
+$(window).load(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});

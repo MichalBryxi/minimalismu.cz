@@ -6,5 +6,5 @@ export default Ember.Controller.extend({
       console.log(item.get('amount'));
       return (prevVal || 0) + item.get('amount');
     });
-  }.property('model.donations.[]')
+  }.property('model.donations.@each.amount')
 });

@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h2>Kolik jsme vybrali?</h2>
+        <h2>Kolik jsme vybrali? <small>{{donationsSum}} Kč</small></h2>
+        <p>Veškeré peníze, které přijdou na <a href="https://www.fio.cz/ib2/transparent?a=2000455143" target="_blank">transparentní účet nadace PERFECT</a> a mají ve zprávě pro příjemce hashtag <strong>#30dníMinimalismu</strong>, se objeví zde. Můžete tak sledovat, kolik procent z cílové částky jsme již vybrali. Data stahujeme jednou za den.</p>
         {{#each model.goals as |goal|}}
           {{x-progress goal=goal goals=model.goals donationsSum=donationsSum}}
         {{/each}}

@@ -58,3 +58,14 @@
   right: 15px;
   margin-top: -32px;
 }
+
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }

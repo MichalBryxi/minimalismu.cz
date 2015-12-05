@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151205190143) do
   create_table "goals", force: :cascade do |t|
     t.string  "name"
     t.string  "description"
+    t.string  "icon"
     t.decimal "amount"
     t.integer "order"
   end

@@ -18,6 +18,7 @@ end
 Goal.create(
   name: 'Strava',
   description: 'Jídlo je dobré.',
+  icon: 'fa-cutlery',
   amount: 3000,
   order: 1
 )
@@ -25,6 +26,7 @@ Goal.create(
 Goal.create(
   name: 'Doprava',
   description: 'Autobusem od *Student Agency*.',
+  icon: 'fa-bus',
   amount: 8000,
   order: 2
 )
@@ -32,6 +34,7 @@ Goal.create(
 Goal.create(
   name: 'Škola, výlety, pobyt v rodině',
   description: 'Doprovodný program je **velmi** důležitý.',
+  icon: 'fa-bed',
   amount: 20000,
   order: 3
 )
