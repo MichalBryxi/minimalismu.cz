@@ -19,8 +19,10 @@ namespace :donations do
       }
 
       has_hashtag = I18n.transliterate(new_donation[:message].downcase).include? "minimalismu"
+      has_correct_amount = (new_donation[:amount].to_i == 30)
+      vondrova_fix = (new_donation[:account_name] == 'VONDROVÁ LENKA')
 
-      if has_hashtag
+      if has_hashtag or has_correct_amount or vondrova_fix
         puts new_donation
         Donation.create(new_donation)
       else
