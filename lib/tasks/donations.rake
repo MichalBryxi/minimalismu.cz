@@ -14,6 +14,7 @@ namespace :donations do
       new_donation = {
         date: row.at_css("td:nth-of-type(1)").text,
         amount: row.at_css("td:nth-of-type(2)").text,
+        amount: row.at_css("td:nth-of-type(2)").text.strip.gsub(/[CZK[[:space:]]]/, ''),
         account_name: row.at_css("td:nth-of-type(4)").text.strip,
         message: row.at_css("td:nth-of-type(5)").text.strip
       }
