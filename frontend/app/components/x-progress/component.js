@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  maxAmount: Ember.computed.max('goalAmounts'),
+
   previousGoals: function () {
     var currentGoalOrder = this.get('goal.order');
 
@@ -26,6 +28,16 @@ export default Ember.Component.extend({
       return (donatedInCurrent / amountInCurrent * 100).toFixed(0);
     }
   }.property('previousGoalsSum', 'donationsSum', 'goal.amount'),
+
+  barWidth: function () {
+    return (this.get('goal.amount') / this.get('maxAmount')) * 100;
+  }.property('maxAmount', 'goal.amount'),
+
+  goalAmounts: function () {
+    return this.get('goals').map(function (goal) {
+      return goal.get('amount');
+    });
+  }.property('goals.@each.amount'),
 
   type: function () {
     if (this.get('percent') < 100) {

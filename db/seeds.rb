@@ -15,19 +15,35 @@ Goal.create(
 )
 
 Goal.create(
-  name: 'Pobyt v rodině',
+  name: 'Pobyt v rodině 1. týden',
   description: 'Ubytování',
   icon: 'fa-bed',
-  amount: 6000,
+  amount: 3000,
   order: 12
 )
 
 Goal.create(
-  name: 'Doprava',
+  name: 'Pobyt v rodině 2. týden',
+  description: 'Ubytování',
+  icon: 'fa-bed',
+  amount: 3000,
+  order: 13
+)
+
+Goal.create(
+  name: 'Doprava tam',
   description: 'Autobusem od *Student Agency*.',
   icon: 'fa-bus',
-  amount: 8000,
-  order: 13
+  amount: 4000,
+  order: 14
+)
+
+Goal.create(
+  name: 'Doprava zpět',
+  description: 'Autobusem od *Student Agency*.',
+  icon: 'fa-bus',
+  amount: 4000,
+  order: 15
 )
 
 10.times do |i|
