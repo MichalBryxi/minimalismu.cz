@@ -1,0 +1,20 @@
+<section id="questions">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Často kladené otázky</h2>
+        <p>Jako u každého projektu, i zde vzniklo velké množství dotazů a nejistot. Rádi jakékoli dotazy zodpovíme, stačí když nás {{#link-to 'contact'}}kontaktujete{{/link-to}}. Opakující se, nebo zajímavé dotazy zde budeme postupně uveřejňovat.</p>
+      </div>
+    </div>
+    <div class="row">
+      {{#each model as |question|}}
+        <div class="col-xs-12">
+          <div class="well">
+            <h3>{{question.title}}</h3>
+            <p>{{markdown-to-html markdown=question.body}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

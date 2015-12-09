@@ -15,8 +15,9 @@ Router.map(function() {
     this.route('sell');
     this.route('give');
   });
-  
+
   this.route('progress');
+  this.route('questions');
 });
 
 export default Router;
