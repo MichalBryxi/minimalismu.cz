@@ -1,5 +1,14 @@
 # minimalismu.cz
 
+## Deployment
+
+Whole deployment process is done via Heroku buildpacks. Please note that with the example below, you will deploy `master` branch from your local copy.
+
+```sh
+git push heroku master # Deploy source code & let Heroku create build
+heroku run rake db:reset donations:reset # Reset database & download donations data
+```
+
 ## Local development environment
 
 ### Clone source
