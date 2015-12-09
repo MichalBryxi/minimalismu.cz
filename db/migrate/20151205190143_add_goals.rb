@@ -6,6 +6,8 @@ class AddGoals < ActiveRecord::Migration
       t.string "icon"
       t.decimal "amount"
       t.integer "order"
+      
+      t.timestamps null: false
     end
   end
 end
