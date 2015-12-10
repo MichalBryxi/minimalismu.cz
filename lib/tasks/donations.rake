@@ -1,5 +1,5 @@
 namespace :donations do
-  task reset: :environment do
+  task reset: [:environment, "db:reset"] do
     require 'nokogiri'
     require 'open-uri'
     require "i18n"
@@ -19,7 +19,7 @@ namespace :donations do
         message: row.at_css("td:nth-of-type(5)").text.strip
       }
 
-      has_hashtag = I18n.transliterate(new_donation[:message].downcase).include? "minimalismu"
+      has_hashtag = I18n.transliterate(new_donation[:message].downcase).include? "minimal"
       has_correct_amount = (new_donation[:amount].to_i == 30)
       vondrova_fix = (new_donation[:account_name] == 'VONDROVÁ LENKA')
 
