@@ -3,8 +3,16 @@
 @import "agency";
 @import "bootstrap";
 
-.navbar-brand .fa-stack {
-  margin-top: -17px;
+.navbar-brand {
+  .fa-stack {
+    margin-top: -17px;
+  }
+  img {
+    height: 64px;
+    margin-top: -17px;
+    position: relative;
+    display: inline-block;
+  }
 }
 
 #about {
