@@ -19,11 +19,13 @@ namespace :donations do
         message: row.at_css("td:nth-of-type(5)").text.strip
       }
 
-      has_hashtag = I18n.transliterate(new_donation[:message].downcase).include? "minimal"
+      unified_message = I18n.transliterate(new_donation[:message].downcase)
+      has_hashtag = unified_message.include? "minimal"
       has_correct_amount = (new_donation[:amount].to_i == 30)
       vondrova_fix = (new_donation[:account_name] == 'VONDROVÁ LENKA')
+      has_thirty_in_message = unified_message.include? "30"
 
-      if has_hashtag or has_correct_amount or vondrova_fix
+      if has_hashtag or has_correct_amount or vondrova_fix or has_thirty_in_message
         puts new_donation
         Donation.create(new_donation)
       else
