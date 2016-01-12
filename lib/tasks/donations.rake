@@ -34,4 +34,12 @@ namespace :donations do
     end
   end
 
+  task dump: [:environment] do
+    csv_string = CSV.generate do |csv|
+      donations = Donation.group(:account_name).sum(:amount).map{|k, v| csv << [k, v.to_i]}
+    end
+
+    puts csv_string
+  end
+
 end
