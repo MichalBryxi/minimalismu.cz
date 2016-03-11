@@ -6,7 +6,8 @@ namespace :donations do
 
     Donation.destroy_all
 
-    url = "https://www.fio.cz/ib2/transparent?a=2000455143&f=30.11.2015&t=30.01.2016"
+    now = Time.now.strftime("%d.%m.%Y")
+    url = "https://www.fio.cz/ib2/transparent?a=2000455143&f=30.11.2015&t=#{now}"
     doc = Nokogiri::HTML(open(url))
 
     rows = doc.css("#id8 tbody tr")
